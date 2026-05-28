@@ -1,0 +1,20 @@
+Connection String 
+
+postgresql://neondb_owner:npg_TeEOV7gYpR1x@ep-jolly-shape-aoq4n7cx.c-2.ap-southeast-1.aws.neon.tech/neondb?sslmode=require
+
+
+
+Host
+ep-jolly-shape-aoq4n7cx.c-2.ap-southeast-1.aws.neon.tech
+Database
+neondb
+Role
+neondb_owner
+Password
+************
+Pooler host
+ep-jolly-shape-aoq4n7cx-pooler.c-2.ap-southeast-1.aws.neon.tech
+
+
+
+npx neonctl@latest init
