@@ -11,14 +11,11 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  // 1. Hook up the Next.js and TypeScript defaults (fixed with the .js extension!)
+  // This line handles BOTH the core and typescript rules automatically
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   
-  // 2. Your custom rule overrides go here
   {
     rules: {
-      // PASTE YOUR OLD CUSTOM RULES FROM YOUR JSON FILE HERE
-      // Example:
       "no-console": "warn", 
     },
   },
