@@ -1,22 +1,15 @@
-﻿import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-// This compatibility layer allows us to use legacy extended configs
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+﻿import nextVitals from "eslint-config-next/core-web-vitals.js";
+import nextTs from "eslint-config-next/typescript.js";
 
 const eslintConfig = [
-  // This line handles BOTH the core and typescript rules automatically
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  // Directly spread the configurations Node.js resolves
+  ...nextVitals,
+  ...nextTs,
   
+  // Your custom overrides
   {
     rules: {
-      "no-console": "warn", 
+      "no-console": "warn",
     },
   },
 ];
