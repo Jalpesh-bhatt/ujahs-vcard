@@ -1,5 +1,5 @@
 export { auth as middleware }
-from "@/auth"
+from "@/lib/auth"
 
 export const config = {
 
